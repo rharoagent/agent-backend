@@ -1,0 +1,84 @@
+{
+  "$comment": "Thin per-client config. Swapping clients = editing this file, not rewriting the agent. One of these per client, loaded by the core engine at call time.",
+  "template_version": 1,
+  "client_id": "fuentes-landscaping",
+  "vertical": "landscaping",
+
+  "business": {
+    "legal_name": "Fuentes Landscaping LLC",
+    "display_name": "Fuentes Landscaping",
+    "phone_number_twilio": "+1XXXXXXXXXX",
+    "timezone": "America/New_York",
+    "service_area": {
+      "type": "radius_miles",
+      "center_zip": "07410",
+      "radius": 20
+    }
+  },
+
+  "hours": {
+    "monday":    { "open": "07:00", "close": "18:00" },
+    "tuesday":   { "open": "07:00", "close": "18:00" },
+    "wednesday": { "open": "07:00", "close": "18:00" },
+    "thursday":  { "open": "07:00", "close": "18:00" },
+    "friday":    { "open": "07:00", "close": "18:00" },
+    "saturday":  { "open": "08:00", "close": "14:00" },
+    "sunday":    null,
+    "after_hours_behavior": "take_message_and_text_owner"
+  },
+
+  "services": [
+    {
+      "id": "lawn_mowing",
+      "name": "Lawn mowing",
+      "price_model": "quote_on_property_size",
+      "typical_range": "$40-$90/visit",
+      "requires_site_visit_for_quote": false
+    },
+    {
+      "id": "landscape_design",
+      "name": "Landscape design / installation",
+      "price_model": "custom_quote",
+      "requires_site_visit_for_quote": true
+    }
+  ],
+
+  "policies": {
+    "cancellation_policy_text": "[PENDING — ask Carlos: how much notice, any fee?]",
+    "reschedule_allowed": true
+  },
+
+  "escalation": {
+    "emergency_keywords": [
+      "tree down", "tree fell", "branch on house", "branch on car",
+      "flooding", "downed power line", "storm damage"
+    ],
+    "emergency_response": "acknowledge_and_transfer_immediately",
+    "human_handoff": {
+      "name": "Carlos Fuentes",
+      "phone": "+1XXXXXXXXXX",
+      "when": ["emergency_keyword_matched", "caller_explicitly_asks_for_owner", "complaint", "anything_agent_cannot_resolve"]
+    }
+  },
+
+  "payment": {
+    "collect_payment_on_call": "[PENDING — confirm with Carlos: deposit on booking, full payment on call, or invoice-after? Original project goal assumed on-call payment — do not default to false without confirming.]",
+    "deposit_required": false,
+    "deposit_amount": null,
+    "dispatch_fee": null,
+    "stripe_account_id": "acct_XXXXXXXXXXXX",
+    "notes": "Landscaping is often invoiced after the job, but confirm — the pilot's whole premise was phone payment, so this should be a deliberate choice, not a default."
+  },
+
+  "calendar": {
+    "google_calendar_id": "fuentes-landscaping@group.calendar.google.com",
+    "appointment_duration_minutes": 60,
+    "buffer_minutes_between_jobs": 30
+  },
+
+  "voice_and_tone": {
+    "agent_name": "the Fuentes Landscaping assistant",
+    "greeting": "Thanks for calling Fuentes Landscaping, how can I help you today?",
+    "personality_notes": "Friendly, brief, no hard sell."
+  }
+}

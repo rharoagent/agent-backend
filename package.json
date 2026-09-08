@@ -1,0 +1,12 @@
+{
+  "name": "agent-backend",
+  "version": "0.1.0",
+  "description": "Core engine connecting the Vapi/Retell agent to per-client calendars and payments",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
