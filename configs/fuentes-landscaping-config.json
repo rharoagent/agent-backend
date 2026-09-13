@@ -44,7 +44,7 @@
   ],
 
   "policies": {
-    "cancellation_policy_text": "[PENDING — ask Carlos: how much notice, any fee?]",
+    "cancellation_policy_text": "24 hour notice required to cancel or reschedule without a fee",
     "reschedule_allowed": true
   },
 
