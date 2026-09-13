@@ -7,11 +7,11 @@
   "business": {
     "legal_name": "Fuentes Landscaping LLC",
     "display_name": "Fuentes Landscaping",
-    "phone_number_twilio": "+1XXXXXXXXXX",
+    "phone_number_twilio": "+12014211842",
     "timezone": "America/New_York",
     "service_area": {
       "type": "radius_miles",
-      "center_zip": "07410",
+      "center_zip": "07424",
       "radius": 20
     }
   },
@@ -56,7 +56,7 @@
     "emergency_response": "acknowledge_and_transfer_immediately",
     "human_handoff": {
       "name": "Carlos Fuentes",
-      "phone": "+1XXXXXXXXXX",
+      "phone": "+12014211842",
       "when": ["emergency_keyword_matched", "caller_explicitly_asks_for_owner", "complaint", "anything_agent_cannot_resolve"]
     }
   },
