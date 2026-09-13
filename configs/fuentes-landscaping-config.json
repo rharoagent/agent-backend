@@ -63,8 +63,8 @@
 
   "payment": {
     "collect_payment_on_call": true,
-    "deposit_required": false,
-    "deposit_amount": null,
+    "deposit_required": true,
+    "deposit_amount": "30 percent for design and installation jobs, none for routine services",
     "dispatch_fee": null,
     "stripe_account_id": "acct_XXXXXXXXXXXX",
     "notes": "Landscaping is often invoiced after the job, but confirm — the pilot's whole premise was phone payment, so this should be a deliberate choice, not a default."
