@@ -62,7 +62,7 @@
   },
 
   "payment": {
-    "collect_payment_on_call": "[PENDING — confirm with Carlos: deposit on booking, full payment on call, or invoice-after? Original project goal assumed on-call payment — do not default to false without confirming.]",
+    "collect_payment_on_call": true,
     "deposit_required": false,
     "deposit_amount": null,
     "dispatch_fee": null,
